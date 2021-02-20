@@ -5,6 +5,7 @@ Zamanında Description Technique sunucusunda yayın açarak yazdığım invite b
 * `me`: Yaptığınız davet sayısını detaylı bir şekilde gösterir.
 * `top`: Sunucunun toplam invite sıralamasını gösterir.
 * `davet ekle/sil/sorgu`: Belirttiğiniz argümana göre kişiye davet ekle/çıkarır ya da kim tarafından ne zaman davet edildiğini gösterir.
+* `invites`: Davet ettiğiniz kişileri gösterir.
 
 # Kurulum
 * İlk olarak bilgisayarına [Node JS](https://nodejs.org/en/) indir.
