@@ -20,4 +20,9 @@ Zamanında Description Technique sunucusunda yayın açarak yazdığım invite b
 
 Tada 🎉. Artık invite botun hazır. Dilediğin gibi kullanabilirsin.
 
+# İletişim
+[Discord Sunucum](https://discord.gg/UEPcFtytcc)
+[Discord Profilim](https://discord.com/users/350976460313329665)
+Herhangi bir hata bulmanız durumunda ya da yardım isteyeceğiniz zaman buralardan bana ulaşabilirsiniz.
+
 ### NOT: Botta MIT lisansı bulunmaktadır. Bu botun dosyalarının benden habersiz paylaşılması/satılması durumunda gerekli işlemler yapılacaktır!
