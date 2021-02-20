@@ -17,38 +17,19 @@ module.exports = {
       if (!message.member.hasPermission(8)) return;
       const amount = args[2];
       if (!amount) return message.reply("bir miktar belirtmelisin!");
-      const data = await inviterSchema.findOne({ guildID: message.guild.id, userID: member.user.id });
-
-      if (!data) {
-        new inviterSchema({
-          guildID: message.guild.id,
-          userID: member.user.id,
-          total: amount,
-          regular: 0,
-          bonus: amount,
-          leave: 0,
-          fake: 0,
-        }).save();
-      } else {
-        data.total += amount;
-        data.bonus += amount;
-        data.save();
-      }
-
+      await inviterSchema.findOneAndUpdate({ guildID: member.guild.id, userID: member.user.id }, { $inc: { total: parseInt(amount), bonus: parseInt(amount) } }, { upsert: true });
       message.channel.send(embed.setDescription(`${member.toString()} üyesine ${amount} adet bonus davet eklendi!`));
     } else if (args[0] === "sil" || args[0] === "delete") {
       if (!message.member.hasPermission(8)) return;
       const amount = args[2];
       if (!amount) return message.reply("bir miktar belirtmelisin!");
       const data = await inviterSchema.findOne({ guildID: message.guild.id, userID: member.user.id });
-
       if (!data) return message.reply("bu kişinin invite verisi bulunmuyor!");
       else {
-        data.total += amount;
-        data.bonus += amount;
+        data.total -= parseInt(amount);
+        data.bonus -= parseInt(amount);
         data.save();
       }
-
       message.channel.send(embed.setDescription(`${member.toString()} üyesinden ${amount} adet bonus davet çıkarıldı!`));
     } else if (args[0] === "sorgu" || args[0] === "query") {
       const data = await inviteMemberSchema.findOne({ guildID: message.guild.id, userID: member.user.id });
