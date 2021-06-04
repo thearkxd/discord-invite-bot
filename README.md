@@ -1,11 +1,4 @@
 # Discord Invite Bot
-Zamanında Description Technique sunucusunda yayın açarak yazdığım invite botunu paylaşmanın zamanı geldi.
-
-# Komutlar
-* `me`: Yaptığınız davet sayısını detaylı bir şekilde gösterir.
-* `top`: Sunucunun toplam invite sıralamasını gösterir.
-* `davet ekle/sil/sorgu`: Belirttiğiniz argümana göre kişiye davet ekle/çıkarır ya da kim tarafından ne zaman davet edildiğini gösterir.
-* `invites`: Davet ettiğiniz kişileri gösterir.
 
 # Kurulum
 * İlk olarak bilgisayarına [Node JS](https://nodejs.org/en/) indir.
@@ -19,6 +12,10 @@ Zamanında Description Technique sunucusunda yayın açarak yazdığım invite b
 * Kurulum bittikten sonra ```npm start``` yaz ve botu başlat.
 
 Tada 🎉. Artık invite botun hazır. Dilediğin gibi kullanabilirsin.
+
+# Not
+Bu bot, paylaşmış olduğum [gelişmiş stat botu](https://github.com/thearkxd/discord-advanced-stat-bot) ile tam uyumlu çalışmaktadır. Eğer farklı bir stat botu kullanıyorsanız, botu kendinize göre özelleştirebilir, ya da görev ve coin işlemlerini silebilirsiniz.
+
 
 # İletişim
 * [Discord Sunucum](https://discord.gg/UEPcFtytcc)

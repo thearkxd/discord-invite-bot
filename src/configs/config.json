@@ -1,4 +1,7 @@
 {
-    "invLogChannel": "",
-    "tag": ""
+  "invLogChannel": "",
+  "tag": "",
+  "emojis": {
+    "coin": ""
+  }
 }

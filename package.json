@@ -13,9 +13,7 @@
     "mongoose": "^5.11.9"
   },
   "devDependencies": {
-    "eslint": "^7.17.0"
-  },
-  "engines": {
-    "node": "12.x"
+    "eslint": "^7.17.0",
+    "prettier": "^2.3.0"
   }
 }
