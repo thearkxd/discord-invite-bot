@@ -23,7 +23,7 @@ module.exports = async (member) => {
   if (Date.now() - member.user.createdTimestamp <= 1000 * 60 * 60 * 24 * 7) await inviterSchema.findOneAndUpdate({ guildID: member.guild.id, userID: invite.inviter.id }, { $inc: { total: 1, fake: 1 } }, { upsert: true });
   else await inviterSchema.findOneAndUpdate({ guildID: member.guild.id, userID: invite.inviter.id }, { $inc: { total: 1, regular: 1 } }, { upsert: true })
   const inviterMember = member.guild.members.cache.get(invite.inviter.id);
-  if (inviterMember) await member.updateTask(member.guild.id, "invite", 1);
+  if (inviterMember) await inviterMember.updateTask(member.guild.id, "invite", 1);
   const inviterData = await inviterSchema.findOne({ guildID: member.guild.id, userID: invite.inviter.id });
   const total = inviterData ? inviterData.total : 0;
   if (channel) channel.send(`${member} sunucumuza katıldı. ${invite.inviter.tag} tarafından davet edildi. (**${total}** davet)`);
