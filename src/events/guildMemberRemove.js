@@ -15,7 +15,7 @@ module.exports = async (member) => {
   const total = inviterData ? inviterData.total : 0;
   channel.send(`\`${member.user.tag}\` sunucumuzdan ayrıldı. ${inviter.tag} tarafından davet edilmişti. (**${total}** davet)`);
   const inviterMember = member.guild.members.cache.get(inviter.id);
-  if (inviterMember) await member.updateTask(member.guild.id, "invite", -1);
+  if (inviterMember) await inviterMember.updateTask(member.guild.id, "invite", -1);
 };
 
 module.exports.conf = {
